@@ -19,6 +19,7 @@ namespace Produktpris_med_metoder
 
 
 
+
         }
 
         private static double GetDouble()
