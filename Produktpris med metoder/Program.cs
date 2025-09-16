@@ -13,8 +13,10 @@ namespace Produktpris_med_metoder
             Console.WriteLine("Ange antal");
             int quantity = GetInt();
             double total = CalculateTotalPrice(price, quantity);
-            Console.WriteLine($"Produkten {product} med priset {price} kr/st och antal {quantity} st kostar totalt {total} kr inkl. moms");
+            Console.WriteLine($"Produkten {product} med priset {price} kr/st och antal {quantity} st kostar totalt {total} kr inkl. 25% moms");
 
+            total = CalculateTotalPrice(price, quantity, 0.12);
+            Console.WriteLine($"Produkten {product} med priset {price} kr/st och antal {quantity} st kostar totalt {total} kr inkl. 12% moms");
 
         }
         private static double CalculateTotalPrice(double price, int quantity, double moms = 0.25)
